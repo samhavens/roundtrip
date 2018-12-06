@@ -5,6 +5,7 @@ name = "pypi"
 
 [packages]
 mtranslate = "*"
+google-cloud-translate = "*"
 
 [dev-packages]
 

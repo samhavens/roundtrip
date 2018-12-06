@@ -8,9 +8,9 @@ Translating a phrase to another language and back, called back-translation, is a
 
 ### Notice
 
-This is just a hack for one-off examples. It uses the API in a way that may not have been intended. For any large-scale translation, you should use the [Cloud Translation API](https://cloud.google.com/translate/docs/) which is fast and reasonably priced.
+The CLI is just a hack for one-off examples. It uses the API in a way that may not have been intended. For any large-scale translation, you should use the [Cloud Translation API](https://cloud.google.com/translate/docs/) which is fast and reasonably priced.
 
-The plan is to replace the implementation under the hood to use the official API, but this is the POC.
+If the ENV variable `GOOGLE_APPLICATION_CREDENTIALS` is set, it will use the official Google Translate API with the credentials it finds in `GOOGLE_APPLICATION_CREDENTIALS`.
 
 ### Usage
 
@@ -31,5 +31,7 @@ from roundtrip import backtranslate
 
 back = backtranslate("this is a phrase in my NLP training data", "de")
 print(back)
->>> This is a sentence in my NLP training data
+>>> "This is a sentence in my NLP training data"
 ```
+
+If the env var `GOOGLE_APPLICATION_CREDENTIALS` is set, the python snippet above will use the official translate API and you will be charged, FYI.
