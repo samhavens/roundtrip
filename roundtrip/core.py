@@ -36,7 +36,10 @@ def backtranslate(phrase, to_language="auto", from_language="auto"):
         translation = translate_client.translate(
             phrase,
             target_language=to_language)
+        text = translation.get('translatedText')
+        if from_language == "auto":
+            from_language = translation.get('detectedSourceLanguage')
         back = translate_client.translate(
-            translation,
+            text,
             target_language=from_language)
-        return back
+        return back.get('translatedText')
