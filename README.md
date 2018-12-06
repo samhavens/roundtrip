@@ -24,7 +24,7 @@ $ roundtrip "Returns the translation using google translate you must shortcut th
 Returns the translation using Google Translate, you must shorten the language you set
 ```
 
-or from python:
+or from `myscript.py`:
 
 ```py
 from roundtrip import backtranslate
@@ -34,4 +34,8 @@ print(back)
 >>> "This is a sentence in my NLP training data"
 ```
 
-If the env var `GOOGLE_APPLICATION_CREDENTIALS` is set, the python snippet above will use the official translate API and you will be charged, FYI.
+If the env var `GOOGLE_APPLICATION_CREDENTIALS` is set, the python snippet above will use the official translate API and you will be charged. So call it like this:
+
+```sh
+$ GOOGLE_APPLICATION_CREDENTIALS='/home/users/example.json' myscript.py
+```
