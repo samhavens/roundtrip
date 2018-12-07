@@ -14,6 +14,12 @@ If the ENV variable `GOOGLE_APPLICATION_CREDENTIALS` is set, it will use the off
 
 ### Usage
 
+Install
+
+```sh
+pip install roundtrip
+```
+
 To play around on the CLI, use like this:
 
 ```sh
